@@ -44,7 +44,7 @@ git clone https://github.com/your-username/todo-app.git
 # Navigate into the project directory
 
 ```bash
-cd todo-app
+cd todo_local
 ```
 
 # Open the index.html file in your browser
@@ -75,8 +75,8 @@ Tasks are stored in the browser using the `localStorage` API as JSON strings. Wh
 
 ## 🧑‍💻 Author
 
-Built by Abhishek Ganapure  
-GitHub: https://github.com/your-github-handle
+Built by abh3shek
+GitHub: https://github.com/Abh3shek
 
 ---
 
