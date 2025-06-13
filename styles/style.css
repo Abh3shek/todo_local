@@ -1,0 +1,223 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2d3748;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__menu {
+  cursor: pointer;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Todo Section */
+.todo {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo__title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #2d3748;
+}
+
+.todo__input-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo__input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.todo__add-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo__add-btn:hover {
+  background-color: #3182ce;
+}
+
+/* .todo__list {
+  list-style: none;
+  max-height: 50vh;
+  overflow: auto;
+  padding-right: 10px;
+}
+
+.todo__list li {
+  padding: 0.75rem 1rem;
+  background-color: #edf2f7;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__list li span {
+  flex-grow: 1;
+}
+
+.todo__list li button {
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #e53e3e;
+  color: white;
+  cursor: pointer;
+}
+
+.todo__list li button:hover {
+  background-color: #c53030;
+} */
+
+/* updated list UI */
+.todo__list {
+  list-style: none;
+  max-height: 50vh;
+  overflow: auto;
+  padding-right: 10px;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* List item styling */
+.todo__list li {
+  padding: 0.75rem 1rem;
+  background-color: #edf2f7;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* allows vertical alignment when timestamp is lower */
+}
+
+/* Wrapper for task and timestamp */
+.todo__task {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Timestamp */
+.todo__task-time {
+  font-size: 12px;
+  color: #718096;
+}
+
+/* Main task text */
+.todo__task-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2d3748;
+  word-break: break-word;
+  margin-top: 4px;
+}
+
+/* Delete button */
+.todo__delete-btn {
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #e53e3e;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.todo__update-btn {
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #060b20;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.todo__delete-btn:hover {
+  background-color: #c53030;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f5f9;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .todo__input-section {
+    flex-direction: column;
+  }
+
+  .todo__list {
+    max-height: 190px;
+    /* adjust height as needed for mobile */
+    overflow-y: auto;
+    /* space below scroll area */
+    padding-right: 10px;
+    /* optional, to prevent scrollbar overlapping content */
+  }
+
+  .todo {
+    padding: 1rem;
+  }
+}
